@@ -1,6 +1,6 @@
 pipelines:
   test-run:
-    group: Getting_started
+    group: Getting-started
     environment_variables:
       GIT_USERNAME: "{{SECRET:[vault][GIT_USERNAME]}}"
     materials:
