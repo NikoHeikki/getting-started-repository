@@ -7,7 +7,6 @@ pipelines:
       acceptancetesting:
         git: https://github.com/NikoHeikki/getting-started-repository.git
         branch: main
-        auto_update: false
     stages:
       - run-command:
           jobs:
