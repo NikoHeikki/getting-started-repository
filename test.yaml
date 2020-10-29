@@ -1,0 +1,21 @@
+pipelines:
+  test-run:
+    group: Getting_started
+    environment_variables:
+      GIT_USERNAME: "{{SECRET:[vault][GIT_USERNAME]}}"
+    materials:
+      acceptancetesting:
+        git: https://github.com/NikoHeikki/getting-started-repository.git
+        branch: master
+        auto_update: false
+    stages:
+      - run-command:
+          jobs:
+            run:
+              elastic_profile_id: "openjdk8-maven3-oc-az"
+              tasks:
+               - exec:
+                   command: bash
+                   arguments:
+                    - "-c"
+                    - "echo $GIT_USERNAME"
