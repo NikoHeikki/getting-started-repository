@@ -11,7 +11,7 @@ pipelines:
       - run-command:
           jobs:
             run:
-              elastic_profile_id: "openjdk8-maven3-oc-az"
+              elastic_profile_id: demo-app
               tasks:
                - exec:
                    command: bash
